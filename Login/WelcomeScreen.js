@@ -26,12 +26,12 @@ export default class WelcomeScreen extends React.Component {
 	styles = StyleSheet.create({
 		buttonText: {
 			width: 200,
-			fontSize: 17,
-			borderWidth: 1,
-			borderColor: 'gold',
-			color: 'gold',
-			margin: 10,
+			backgroundColor: '#033b63',
+			color: 'white',
+			fontSize: 25,
+			color: '#fff',
 			padding: 10,
+			margin: 10,
 			textAlign: 'center'
 		}
 	})

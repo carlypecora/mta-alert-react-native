@@ -20,50 +20,11 @@ render(){
   }
 }
 
-const LoginStackNavigator = createStackNavigator(
-  { 
-    Login: { screen: Login } 
-  },
-  {
-    defaultNavigationOptions: ({ navigation }) => {
-      return {
-        headerLeft: (
-          <Button
-            name='chevron-left'
-            size={30}
-            title="Login"
-            style={{ paddingLeft: 10, paddingBottom: 20, color: 'gold' }}
-            onPress={() => navigation.navigate('Welcome')}
-          />
-        )
-      };
-    }
-  }
-)
-
-const UserStackNavigator = createStackNavigator(
-  { Signup: { screen: Signup} },
-  {
-    defaultNavigationOptions: ({ navigation }) => {
-      return {
-        headerLeft: (
-          <Button
-            name='chevron-left'
-            size={30}
-            title="Signup"
-            style={{ paddingLeft: 10, color: 'gold' }}
-            onPress={() => navigation.navigate('Welcome')}
-          />
-        )
-      };
-    }
-  }
-);
 
 const WelcomeSwitchNavigator = createSwitchNavigator({
   Welcome: { screen: WelcomeScreen },
-  Login: { screen: LoginStackNavigator },
-  Signup: { screen: UserStackNavigator },
+  Login: { screen: Login },
+  Signup: { screen: Signup },
 });
 
 const AppContainer = createAppContainer(WelcomeSwitchNavigator);
